@@ -11,7 +11,7 @@ console.log(name)
 console.log(birthCity)
 console.log(birthYear)
 
-let movie = "Avengers"; // string literl
+let movie = "Avengers"; // string literal
 let score = 10.89; //number literal
 let isValid = true; //boolean
 //let name; //undefined
@@ -44,7 +44,66 @@ const patientEmail = 'ana@email.com';
 console.log(typeof patientId);
 console.log(typeof patientId1);
 console.log(typeof isEnrolled);
-console.log(typeof patientEmail);*/
+console.log(typeof patientEmail);
+
+
+//area e o perimetro de um triangulo
+let base = 5;
+let altura = 8;
+let area = base * altura;
+let perimetro = base + altura + area;
+
+console.log(perimetro)
+
+//operadores de atribuição e operadores lógicos if / else
+let trybe = 17;
+if (trybe >= 14 && trybe < 14.40) {
+  console.log("Esquenta");
+}
+else if (trybe >= 16.30 && trybe < 17.50) {
+  console.log("Aula ao vivo");
+}
+else if (trybe >= 19.40 && trybe < 20) {
+  console.log("Fechamento");
+}
+else {
+  console.log("Fora dos momentos sícronos")
+}
+
+//nota de uma pessoa candidata em um desafio técnico
+let nota = 83;
+if (nota >= 80) {
+  console.log("Parabéns, você foi aprovado(a)");
+}
+else if (nota < 80 && nota >= 60) {
+  console.log("Você está na nossa lista de espera");
+}
+else {
+  console.log("Você foi reprovado(a)");
+}
+
+//switch -- case
+let trafficLight = "laranja";
+
+switch (trafficLight) {
+  case "vermelho":
+    console.log("Pare!");
+    break;
+
+  case "amarelo":
+    console.log("Atenção!");
+    break;
+    
+  case "verde":
+    console.log("Siga!");
+    break;
+
+  default:
+    console.log("Valor não identificado");
+}
+
+//estado da pessoa candidata ao processo seletivo
+*/
 
 
 // Cinco programas, das operações aritméticas básicas
