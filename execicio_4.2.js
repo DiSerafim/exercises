@@ -92,7 +92,7 @@ console.log(menu); //[ 'Home', 'Serviços', 'Portfólio', 'Links', 'Contato' ]
 
 
 // LOOP FOR
-
+    
 // Tabuada de um numero
 let numero = 5;
 for (let index = 1; index <= 9; index += 1) {
