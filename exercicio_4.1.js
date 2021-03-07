@@ -1,4 +1,4 @@
-/*exercísio de fixação 24/02/2021
+/*exercísio de fixação 24/02/2021 - Introdução - JavaScript / JavaScript - Primeiros passos
 console.log("Hello World!!");
 const name = 'Diego';
 const birthCity = 'Belém';
@@ -106,10 +106,10 @@ switch (trafficLight) {
 */
 
 
-// Cinco programas, das operações aritméticas básicas
+// Cinco (na versade são 15) programas, das operações aritméticas básicas
 // Adição, Subtração, Multiplicação, Divisão, Módulo
 
-//#O maior de dois números
+//#2 O maior de dois números
 let a = 7;
 let b = 9;
 
@@ -119,7 +119,7 @@ if (a > b) {
   console.log(b);
 } // 9
 
-//#O maior de três números
+//#3 O maior de três números
 let a = 12;
 let b = 15;
 let c = 19;
@@ -132,31 +132,31 @@ if (c > a && c > b) {
   console.log(a)
 }
 
-//#positivo ou negativo
-let positivoOuNegativo = 34352;
+//#4 positivo ou negativo
+let positivoOuNegativo = "351";
 
 if (positivoOuNegativo % 2 == 0) {
   console.log("positive");
 } else if (positivoOuNegativo % 2 == 1) {
   console.log("negative")
 } else {
-  console.log(0);
+  console.log("zero");
 }
 
-//#triangulo
+//#5 triangulo
 let tri = 70;
 let an = 50;
-let gulo = 60;
+let gulo = "61A";
 
 if (tri + an + gulo == 180) {
-  console.log(tri + an + gulo == 180);
-} else if (tri + an + gulo != 180){
-  console.log(tri + an + gulo == 180);
+  console.log(true);
+} else if (tri + an + gulo > 180 || tri + an + gulo < 180){
+  console.log(false);
 } else {
   console.log("Erro! angulos inválidos");
 }
 
-//#xadrez
+//#6 xadrez
 let peçaDoXadrez = "Dama".toLowerCase(); // 
 
 switch (peçaDoXadrez) {
@@ -188,8 +188,8 @@ switch (peçaDoXadrez) {
     console.log("Error! informações apenas sobre (Rei, Dama, Torre, Bispo, Cavalo e Peão)")
 }
 
-//#converte uma nota dada em porcentagem (de 0 a 100)
-let porcentagem = "100"; 
+//#7 converte uma nota dada em porcentagem (de 0 a 100)
+let porcentagem = "40"; 
 
 if (porcentagem < 0 || porcentagem > 100) {
   console.log("ERROR! não pode ser menor que zero e nem maior que 100")
@@ -208,3 +208,84 @@ if (porcentagem < 0 || porcentagem > 100) {
 } else {
   console.log("Error! tente um número entre 0 e 100")
 } 
+
+//#8 true se pelo menos um for par ou false se nenhum for par.
+let valueA = 54675;
+let valueB = 54643;
+let valueC = 2;
+
+if (valueA % 2 == 0 || valueB % 2 == 0 || valueC % 2 == 0) {
+  console.log(true);
+} else {
+  console.log(false);
+} 
+
+//#9 true se pelo menos um for impar ou false se nenhum for impar.
+let valueD = 8;
+let valueE = 3;
+let valueF = 4;
+
+if (valueD % 2 == 1 || valueE % 2 == 1 || valueF % 2 == 1) {
+  console.log(true);
+} else {
+  console.log(false);
+}
+
+//#10 duas variáveis diferentes
+let custo = 7;
+let valorDeVenda = 15;
+let lucro = valorDeVenda - custo;
+let estoque = lucro * 1000;
+let impostoSobreOCusto = (0.20) * custo;
+let valorCustoTotal = custo + impostoSobreOCusto;
+
+if (custo <= 0 || valorDeVenda <= 0) {
+  console.log("Error! valor inválido ou menor ou igual a zero");
+} else {
+  console.log(`O valor do produto + impostos é: R$ ${valorCustoTotal}`);
+  console.log(`O lucro sobre o produto vendido é de: ${valorDeVenda - valorCustoTotal}`);
+}
+
+//#11 salário bruto o INSS e o IR
+let salario = 3500.00;
+let inss;
+let ir;
+let salarioLiquido;
+//inss
+if (salario <= 1556.94) {
+  inss = 0.08 * salario
+  console.log(`${inss},00 é o valor do Inss a ser descontado do salário de ${salario},00`);
+} else if (salario >= 1556.95 && salario <= 2594.92) {
+  inss = 0.09 * salario
+  console.log(`${inss},00 é o valor do Inss a ser descontado do salário ${salario},00`);
+} else if (salario >= 2594.93 && salario <= 5189.82) {
+  inss = 0.11 * salario
+  console.log(`${inss},00 é o valor do Inss a ser descontado do salário ${salario},00`);
+} else {
+  inss = 570.88
+  console.log(`${inss},00 é o valor do Inss a ser descontado do salário ${salario},00`);
+}
+
+salario -= inss; 
+console.log(`${salario},00 é o valor do salário com INSS já deduzido`);
+
+//ir
+if (salario <= 1903.98) {
+  console.log(ir = "Isento de IR");
+} else if (salario >= 1903.99 && salario <= 2826.65) {
+  ir = 0.075 * salario - 142.80
+  console.log(`${ir} é o valor do IR a ser descontado do salário de ${salario},00`);
+} else if (salario >= 2826.66 && salario <= 3751.05) {
+  ir = 0.15 * salario - 354.80
+  console.log(`${ir} é o valor do IR a ser descontado do salário de ${salario},00`);
+} else if (salario >= 3751.06 && salario <= 4664.68) {
+  ir = 0.225 * salario - 636.13
+  console.log(`${ir} é o valor do IR a ser descontado do salário de ${salario},00`);
+} else {
+  ir = 869.36
+  console.log(`${ir} é o valor do IR a ser descontado do salário de ${salario},00`);
+}
+
+console.log(`${salarioLiquido = salario - ir} é o seu salario liquido com os impostos (Inss e IR) já descontados`);
+
+// teste em 7 de fevereiro, pasta 2 não funcionou, estoutestando a pasta 1
